@@ -1,5 +1,6 @@
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Particle from "./Particle";
 
 const MainPage = () => {
   return (
@@ -8,6 +9,9 @@ const MainPage = () => {
       <div className="outer-box">
         {/* second-outer */}
         <div className="second-outer">
+          {/* Particle Component */}
+          <Particle />
+
           {/* Left Nav Bar */}
           <div className="side-nav">
             <div className="name-div">
