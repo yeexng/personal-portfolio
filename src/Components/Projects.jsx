@@ -19,6 +19,18 @@ const ProjectArray = [
   },
   {
     image:
+      "https://images.unsplash.com/photo-1592093506632-92ef342e2591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+    title: "Spotify Clone",
+    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+    title: "BenchMark",
+    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+  },
+  {
+    image:
       "https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     title: "BenchMark",
     tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
@@ -54,36 +66,38 @@ const Projects = () => {
             </div>
           </div>
 
-          <div>
-            <Masonry
-              breakpointCols={2}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
-            >
-              {ProjectArray &&
-                ProjectArray.map((posts) => {
-                  return (
-                    <div
-                      key={posts.title}
-                      className="content-secret-card my-masonry-grid_item p-0 mb-4"
-                    >
-                      <Card className="card-no-border">
-                        <Card.Img
-                          variant="top"
-                          src={posts.image}
-                          className="card-img"
-                        />
-                        <Card.Body>
-                          <Card.Title className="font-s secret-post-title">
-                            {posts.title}
-                          </Card.Title>
-                          <Card.Text></Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </div>
-                  );
-                })}
-            </Masonry>
+          <div className="masonry-div">
+            <div className="masonry-scroll">
+              <Masonry
+                breakpointCols={2}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+              >
+                {ProjectArray &&
+                  ProjectArray.map((posts) => {
+                    return (
+                      <div
+                        key={posts.title}
+                        className="content-secret-card my-masonry-grid_item p-0 mb-4"
+                      >
+                        <Card className="card-no-border">
+                          <Card.Img
+                            variant="top"
+                            src={posts.image}
+                            className="card-img"
+                          />
+                          <Card.Body>
+                            <Card.Title className="font-s secret-post-title">
+                              {posts.title}
+                            </Card.Title>
+                            <Card.Text></Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </div>
+                    );
+                  })}
+              </Masonry>
+            </div>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
           </div>
           {/* Content Div */}
-          <div>
+          <div className="contact-div">
             <p>
               <a
                 href="https://www.linkedin.com/in/samyxng/"

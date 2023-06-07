@@ -1,5 +1,5 @@
 body{
-  color: aliceblue;
+  color: rgb(3, 64, 117);
 }
 
 .my-masonry-grid {
@@ -69,4 +69,25 @@ body{
 
 .vertical-timeline-element {
   margin-bottom: 20px; /* Increase or decrease as needed */
+}
+
+.masonry-div{
+  position: absolute;
+  height:90%;
+  width:50vw;
+  bottom:3vh;
+  right:3vw;
+  overflow: hidden;
+}
+
+.masonry-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 20px; /* Create space for scrollbar */
+}
+
+.contact-div{
+  position: absolute;
+  bottom:3vh;
+  left:2vw;
 }
