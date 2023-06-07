@@ -1,0 +1,72 @@
+body{
+  color: aliceblue;
+}
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+  }
+
+.outer-box{
+  height:100vh;
+  width: 100vw;
+  background-color: #000000;
+  position: relative;
+}
+
+.second-outer{
+  background-color: rgb(6, 24, 39);
+  height: 92vh;
+  width: 96vw;
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+}
+
+.side-nav{
+  position:absolute;
+  top:3vh;
+  left:2vw;
+}
+
+.my-intro{
+  /* height: 70vh; */
+  width: 28vw;
+  position: absolute;
+  bottom: 3vh;
+  right: 2vw;
+}
+
+.timeline-div{
+  position:absolute;
+  height: 90%;
+  width: 70vw;
+  bottom: 3vh;
+  right:0;
+  overflow: hidden;
+  
+}
+
+.timeline-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 20px; /* Create space for scrollbar */
+}
+
+.vertical-timeline-element {
+  margin-bottom: 20px; /* Increase or decrease as needed */
+}
