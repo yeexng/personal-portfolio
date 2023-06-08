@@ -82,11 +82,7 @@ const Experience = () => {
             </div>
 
             <div className="">
-              <div className="mb-2">
-                <Link to={"/experiences"} className="no-deco">
-                  Experience
-                </Link>
-              </div>
+              <div className="mb-2 current-page">Experience</div>
               <div className="mb-2">
                 <Link to={"/projects"} className="no-deco">
                   Projects

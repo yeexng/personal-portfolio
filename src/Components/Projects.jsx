@@ -62,11 +62,7 @@ const Projects = () => {
                   Experience
                 </Link>
               </div>
-              <div className="mb-2">
-                <Link to={"/projects"} className="no-deco">
-                  Projects
-                </Link>
-              </div>
+              <div className="mb-2 current-page">Projects</div>
               <div className="mb-2">
                 <Link to={"/contact"} className="no-deco">
                   Contact

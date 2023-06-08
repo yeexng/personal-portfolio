@@ -86,7 +86,7 @@ body{
 
 .masonry-div{
   position: absolute;
-  height:90%;
+  height:75%;
   width:50vw;
   bottom:3vh;
   right:3vw;
@@ -123,6 +123,12 @@ body{
   color: #000000;
 }
 
-.dot{
-  font-size: 25px;
+.current-page{
+  text-decoration: line-through;
+}
+
+.about-me:hover{
+  cursor: pointer;
+  transition: 0.5s;
+color: aliceblue;
 }

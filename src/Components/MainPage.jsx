@@ -41,8 +41,8 @@ const MainPage = () => {
           {/* About Section */}
           <div className="my-intro">
             <p className="about-me">
-              I'm Sam YeeXuan Ng, <br />a Malaysian native who pursued my{" "}
-              education <br />
+              I'm Sam YeeXuan Ng, <br />a Malaysian who pursued my education{" "}
+              <br />
               in Ireland, graduating with an LLB degree.
               <br />
               <br />

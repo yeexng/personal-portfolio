@@ -1,7 +1,7 @@
 import { Nav } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-import { BsDash } from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx";
 import Particle from "./Particle";
 
 const Contact = () => {
@@ -34,9 +34,7 @@ const Contact = () => {
                   Projects
                 </Link>
               </div>
-              <div className="mb-2 pl-n3">
-                <BsDash className="dot" />
-              </div>
+              <div className="mb-2 current-page">Contact</div>
             </div>
           </div>
           {/* Content Div */}
@@ -67,8 +65,8 @@ const Contact = () => {
                 </span>
               </a>
             </p>
-            <p>xuanng96@hotmail.com </p>
-            <p>Resume </p>
+            <p className="about-me">xuanng96@hotmail.com </p>
+            <p className="about-me">Resume </p>
           </div>
         </div>
       </div>
