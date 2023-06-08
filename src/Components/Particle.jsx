@@ -47,11 +47,11 @@ function Particle() {
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 3,
                 },
                 repulse: {
                   distance: 200,
-                  duration: 0.4,
+                  duration: 0.6,
                 },
               },
             },
@@ -63,8 +63,8 @@ function Particle() {
                 color: "#ffffff",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
-                width: 1,
+                opacity: 0.2,
+                width: 0.3,
               },
               collisions: {
                 enable: true,
@@ -76,7 +76,7 @@ function Particle() {
                   default: "bounce",
                 },
                 random: false,
-                speed: 6,
+                speed: 1,
                 straight: false,
               },
               number: {
@@ -84,7 +84,7 @@ function Particle() {
                   enable: true,
                   area: 800,
                 },
-                value: 80,
+                value: 16,
               },
               opacity: {
                 value: 0.5,

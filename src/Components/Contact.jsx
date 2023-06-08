@@ -1,6 +1,8 @@
 import { Nav } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { BsDash } from "react-icons/bs";
+import Particle from "./Particle";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -10,24 +12,30 @@ const Contact = () => {
       <div className="outer-box">
         {/* second-outer */}
         <div className="second-outer">
+          <Particle />
+
           {/* Left Nav Bar */}
           <div className="side-nav">
-            <div className="name-div">
-              <Link to={"/"}>
-                <h1>Sam YX Ng</h1>
+            <div className="name-div mb-5">
+              <Link to={"/"} className="no-deco">
+                <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
-              <p>FullStack Developer</p>
+              <p>FullStack Developer, Community Operations Analyst</p>
             </div>
 
             <div className="">
-              <div>
-                <Link to={"/experiences"}>Experience</Link>
+              <div className="mb-2">
+                <Link to={"/experiences"} className="no-deco">
+                  Experience
+                </Link>
               </div>
-              <div>
-                <Link to={"/projects"}>Projects</Link>
+              <div className="mb-2">
+                <Link to={"/projects"} className="no-deco">
+                  Projects
+                </Link>
               </div>
-              <div>
-                <Link to={"/contact"}>Contact</Link>
+              <div className="mb-2 pl-n3">
+                <BsDash className="dot" />
               </div>
             </div>
           </div>
@@ -38,6 +46,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/samyxng/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="no-deco"
               >
                 LinkedIn{" "}
                 <span>
@@ -50,6 +59,7 @@ const Contact = () => {
                 href="https://github.com/yeexng"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="no-deco"
               >
                 GitHub{" "}
                 <span>
@@ -57,18 +67,8 @@ const Contact = () => {
                 </span>
               </a>
             </p>
-            <p>
-              xuanng96@hotmail.com{" "}
-              <span>
-                <BsBoxArrowUpRight />
-              </span>
-            </p>
-            <p>
-              Resume{" "}
-              <span>
-                <BsBoxArrowUpRight />
-              </span>
-            </p>
+            <p>xuanng96@hotmail.com </p>
+            <p>Resume </p>
           </div>
         </div>
       </div>

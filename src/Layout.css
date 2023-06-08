@@ -1,5 +1,5 @@
 body{
-  color: rgb(3, 64, 117);
+  color: rgb(102, 102, 102);
 }
 
 .my-masonry-grid {
@@ -67,12 +67,11 @@ body{
 
 .timeline-div{
   position:absolute;
-  height: 90%;
+  height: 75%;
   width: 70vw;
   bottom: 3vh;
   right:0;
-  overflow: hidden;
-  
+  overflow: hidden;  
 }
 
 .timeline-scroll {
@@ -104,4 +103,26 @@ body{
   position: absolute;
   bottom:3vh;
   left:2vw;
+}
+
+.no-deco {
+  text-decoration: none;
+  color: rgb(130, 130, 130);
+}
+
+.no-deco:hover {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.name{
+  font-size: 70px;
+}
+
+.black-text{
+  color: #000000;
+}
+
+.dot{
+  font-size: 25px;
 }

@@ -11,25 +11,30 @@ const MainPage = () => {
         <div className="second-outer">
           {/* Particle Component */}
           <Particle />
-
           {/* Left Nav Bar */}
           <div className="side-nav">
-            <div className="name-div">
-              <Link to={"/"}>
-                <h1>Sam YX Ng</h1>
+            <div className="name-div mb-5">
+              <Link to={"/"} className="no-deco">
+                <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
               <p>FullStack Developer, Community Operations Analyst</p>
             </div>
 
             <div className="">
-              <div>
-                <Link to={"/experiences"}>Experience</Link>
+              <div className="mb-2">
+                <Link to={"/experiences"} className="no-deco">
+                  Experience
+                </Link>
               </div>
-              <div>
-                <Link to={"/projects"}>Projects</Link>
+              <div className="mb-2">
+                <Link to={"/projects"} className="no-deco">
+                  Projects
+                </Link>
               </div>
-              <div>
-                <Link to={"/contact"}>Contact</Link>
+              <div className="mb-2">
+                <Link to={"/contact"} className="no-deco">
+                  Contact
+                </Link>
               </div>
             </div>
           </div>
