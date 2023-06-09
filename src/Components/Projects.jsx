@@ -1,4 +1,4 @@
-import { Card, Nav } from "react-bootstrap";
+import { Card, Badge } from "react-bootstrap";
 import Masonry from "react-masonry-css";
 import "../Layout.css";
 import { Link } from "react-router-dom";
@@ -6,35 +6,50 @@ import Particle from "./Particle";
 
 const ProjectArray = [
   {
-    image:
-      "https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-    title: "LinkedIn Clone",
-    link: "",
-    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+    image: "/assets/Travelone.png",
+    title: "Travelone?",
+    tags: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Redux",
+      "MongoDB",
+      "Vercel",
+      "Railway",
+    ],
+    link: "https://travelone.vercel.app/",
+    about:
+      "A website designed mainly targeting single traveler who are seeking companionship and the opportunity to share memories with like-minded individuals. The app aims to connect solo travelers with compatible partners based on their interests, preferences, and travel plans. ",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1592093506632-92ef342e2591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+    image: "/assets/Benchmark.png",
+    title: "Epicode Benchmark",
+    link: "https://github.com/yeexng/U1-BW-Benchmark",
+    tags: ["JavaScript", "CSS", "HTML"],
+    about: "Project cloning the Epicode benchmark system with result function.",
+  },
+  {
+    image: "/assets/SpotifyClone.png",
     title: "Spotify Clone",
-    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+    tags: ["CSS", "React", "Redux", "API"],
+    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
+    about:
+      "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1592093506632-92ef342e2591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
-    title: "Spotify Clone",
-    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+    image: "/assets/MediumClone.png",
+    title: "Medium Clone",
+    tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
+    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
+    about:
+      "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-    title: "BenchMark",
-    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-    title: "BenchMark",
-    tags: ["JavaScript", "CSS", "HTML", "TypeScript"],
+    image: "/assets/NetflixClone.png",
+    title: "NetFlix Clone",
+    tags: ["node.js", "API", "CRUD", "JavaScript", "Bootstrap"],
+    link: "https://github.com/yeexng/U3_D5_Solo_Project_React_NetFlix",
+    about: "Clone of the famous streaming platform",
   },
 ];
 
@@ -83,19 +98,33 @@ const Projects = () => {
                     return (
                       <div
                         key={posts.title}
-                        className="content-secret-card my-masonry-grid_item p-0 mb-4"
+                        className="content-secret-card my-masonry-grid_item p-1 mb-4"
+                        onClick={() => {
+                          window.open(posts.link, "_blank");
+                        }}
                       >
-                        <Card className="card-no-border">
+                        <Card className="card-no-border card-item">
                           <Card.Img
                             variant="top"
                             src={posts.image}
                             className="card-img"
                           />
-                          <Card.Body>
+                          <Card.Body className="card-body-div">
                             <Card.Title className="font-s secret-post-title">
                               {posts.title}
                             </Card.Title>
-                            <Card.Text></Card.Text>
+                            <Card.Text>{posts.about}</Card.Text>
+                            <div className="badge-container">
+                              {posts.tags.map((tag, index) => (
+                                <Badge
+                                  key={index}
+                                  variant="secondary"
+                                  className="mr-1"
+                                >
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
                           </Card.Body>
                         </Card>
                       </div>
