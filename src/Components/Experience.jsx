@@ -12,20 +12,19 @@ import "react-vertical-timeline-component/style.min.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import Particle from "./Particle";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "../Layout.css";
 
 const workIcon = {
   icon: <FontAwesomeIcon icon={faBriefcase} />,
-  iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+  iconStyle: { background: "rgb(33, 150, 243)", color: "rgb(222,222,222)" },
 };
 const schoolIcon = {
   icon: <FontAwesomeIcon icon={faGraduationCap} />,
-  iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+  iconStyle: { background: "rgb(233, 30, 99)", color: "rgb(222,222,222)" },
 };
 const starIcon = {
   icon: <FontAwesomeIcon icon={faStar} />,
-  iconStyle: { background: "rgb(16, 204, 82)", color: "#fff" },
+  iconStyle: { background: "rgb(16, 204, 82)", color: "rgb(222,222,222)" },
 };
 
 const timeline = [
@@ -101,7 +100,10 @@ const Experience = () => {
                 {timeline.map((t, i) => {
                   const contentStyle =
                     i === 0
-                      ? { background: "rgb(33, 150, 243)", color: "#fff" }
+                      ? {
+                          background: "rgb(60, 60, 60)",
+                          color: "rgb(222,222,222)",
+                        }
                       : undefined;
                   const arrowStyle =
                     i === 0
