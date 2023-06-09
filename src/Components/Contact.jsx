@@ -1,8 +1,8 @@
-import { Nav } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import Particle from "./Particle";
+import Resume from "../SamNgCV.pdf";
+import "../Layout.css";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -65,8 +65,20 @@ const Contact = () => {
                 </span>
               </a>
             </p>
-            <p className="about-me">xuanng96@hotmail.com </p>
-            <p className="about-me">Resume </p>
+            <p className="about-me no-deco">
+              <a href="mailto:xuanng96@hotmail.com" className="no-deco">
+                xuanng96@hotmail.com
+              </a>{" "}
+            </p>
+            <a
+              href={Resume}
+              download="SamNgCV"
+              target="_blank"
+              rel="noreferrer"
+              className="resume no-deco"
+            >
+              Resume{" "}
+            </a>
           </div>
         </div>
       </div>

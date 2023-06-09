@@ -5,7 +5,6 @@ import MainPage from "./Components/MainPage";
 import Experience from "./Components/Experience";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import Particle from "./Components/Particle";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Route element={<Experience />} path="/experiences" />
           <Route element={<Projects />} path="/projects" />
           <Route element={<Contact />} path="/contact" />
-          <Route element={<Particle />} path="/p" />
         </Routes>
       </BrowserRouter>
     </>

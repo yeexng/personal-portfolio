@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
-  faSchool,
   faStar,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,9 +10,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import React from "react";
-import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Particle from "./Particle";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "../Layout.css";
 
 const workIcon = {
   icon: <FontAwesomeIcon icon={faBriefcase} />,

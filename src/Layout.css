@@ -2,6 +2,24 @@ body{
   color: rgb(102, 102, 102);
 }
 
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
 .my-masonry-grid {
     display: -webkit-box; /* Not needed if autoprefixing */
     display: -ms-flexbox; /* Not needed if autoprefixing */
@@ -113,10 +131,18 @@ body{
 .no-deco:hover {
   text-decoration: none;
   color: aliceblue;
+    transition: 0.3s;
+
 }
 
 .name{
   font-size: 70px;
+}
+
+.name:hover{
+    transition: 0.5s;
+color: aliceblue;
+
 }
 
 .black-text{
@@ -127,10 +153,15 @@ body{
   text-decoration: line-through;
 }
 
+
 .about-me:hover{
   cursor: pointer;
   transition: 0.5s;
 color: aliceblue;
+}
+
+.resume{
+  text-decoration: none;
 }
 
 .card-body-div{
@@ -147,3 +178,4 @@ color: aliceblue;
   box-shadow: 0 0 10px rgb(110, 110, 110);
   transform: scale(1.02);
 }
+
