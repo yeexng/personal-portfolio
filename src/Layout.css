@@ -2,6 +2,10 @@ body{
   color: rgb(102, 102, 102);
 }
 
+.name-div{
+margin-bottom: 3rem;
+}
+
 .fade-enter {
   opacity: 0;
 }
@@ -179,3 +183,83 @@ color: aliceblue;
   transform: scale(1.02);
 }
 
+@media screen and (max-width: 600px) {
+  .second-outer{
+    border: solid 2vh rgb(14, 14, 14);
+  }
+
+  .name-div{
+    margin-bottom: 1rem;
+  }
+
+  .name{
+    font-size: 50px;
+
+  }
+
+  .name-div > p{
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
+
+  .my-intro{
+    height: 58vh;
+    width:95%;
+    position: absolute;
+    bottom: 3vh;
+    left: 3vw;
+    overflow: hidden;
+  }
+
+  .my-intro-scroll{
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px; /* Create space for scrollbar */
+  
+  }
+
+  .timeline-div{
+    position: absolute;
+    height: 58vh;
+    width:95%;
+    bottom: 3vh;
+    left: 3vw;
+    overflow: hidden;
+  }
+
+  .masonry-div{
+    position: absolute;
+    height: 58vh;
+    width:95%;
+    bottom:3vh;
+    right:3vw;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+  .second-outer{
+    border: solid 3vh rgb(14, 14, 14);
+  }
+
+  .my-intro{
+    height: 60vh;
+    width:60%;
+    position: absolute;
+    bottom: 1vh;
+    right: 3vw;
+    overflow: hidden;
+  }
+
+
+  .masonry-div{
+    position: absolute;
+    height: 58vh;
+    width:95%;
+    bottom:3vh;
+    right:1.3vw;
+    overflow: hidden;
+  }
+
+}

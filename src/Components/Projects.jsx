@@ -3,6 +3,7 @@ import Masonry from "react-masonry-css";
 import "../Layout.css";
 import { Link } from "react-router-dom";
 import Particle from "./Particle";
+import { useState, useEffect } from "react";
 
 const ProjectArray = [
   {
@@ -54,6 +55,24 @@ const ProjectArray = [
 ];
 
 const Projects = () => {
+  const [columns, setColumns] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // If the screen width is less than or equal to 600px, set columns to 1
+      setColumns(window.innerWidth <= 600 ? 1 : 2);
+    };
+
+    // Attach the event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Call the handleResize function initially to set the columns based on the initial screen size
+    handleResize();
+
+    // Cleanup: remove the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       {/* outer layer */}
@@ -64,7 +83,7 @@ const Projects = () => {
 
           {/* Left Nav Bar */}
           <div className="side-nav">
-            <div className="name-div mb-5">
+            <div className="name-div">
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
@@ -89,7 +108,7 @@ const Projects = () => {
           <div className="masonry-div">
             <div className="masonry-scroll">
               <Masonry
-                breakpointCols={2}
+                breakpointCols={columns}
                 className="my-masonry-grid"
                 columnClassName="my-masonry-grid_column"
               >

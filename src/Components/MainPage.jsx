@@ -14,7 +14,7 @@ const MainPage = () => {
           <Particle />
           {/* Left Nav Bar */}
           <div className="side-nav">
-            <div className="name-div mb-5">
+            <div className="name-div">
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
@@ -50,7 +50,7 @@ const MainPage = () => {
           <TransitionGroup component={null}>
             <CSSTransition classNames="fade" timeout={500}>
               <div className="my-intro">
-                <p className="">
+                <div className="my-intro-scroll">
                   <div className="about-me">
                     I'm Sam YeeXuan Ng, <br />a Malaysian who pursued my
                     education <br />
@@ -86,7 +86,7 @@ const MainPage = () => {
                     Let's connect and explore the exciting world of technology
                     together!
                   </div>
-                </p>
+                </div>
               </div>
             </CSSTransition>
           </TransitionGroup>

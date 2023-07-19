@@ -16,7 +16,7 @@ const Contact = () => {
 
           {/* Left Nav Bar */}
           <div className="side-nav">
-            <div className="name-div mb-5">
+            <div className="name-div">
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>

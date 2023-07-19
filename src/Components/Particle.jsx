@@ -1,8 +1,10 @@
-import { useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 function Particle() {
+  const [numParticles, setNumParticles] = useState(16);
+
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -13,6 +15,25 @@ function Particle() {
 
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
+  }, []);
+
+  const adjustParticlesForScreenSize = () => {
+    // Set the number of particles based on the screen width
+    if (window.innerWidth <= 600) {
+      setNumParticles(12); // Adjust this number as needed for smaller screens
+    } else {
+      setNumParticles(16); // Default number of particles for larger screens
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize to adjust particles on screen size change
+    window.addEventListener("resize", adjustParticlesForScreenSize);
+
+    // Cleanup: remove the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", adjustParticlesForScreenSize);
+    };
   }, []);
 
   return (
@@ -84,7 +105,7 @@ function Particle() {
                   enable: true,
                   area: 800,
                 },
-                value: 16,
+                value: numParticles,
               },
               opacity: {
                 value: 0.5,
