@@ -61,18 +61,17 @@ const MainPage = () => {
                   <br />
                   <div className="about-me">
                     While studying law, I discovered my passion for coding and
-                    decided to
-                    <br /> dive into the tech industry. I completed a rigorous
-                    coding bootcamp and emerged as a full-stack developer.
+                    decided to dive into the tech industry. I completed a
+                    rigorous coding bootcamp and emerged as a full-stack
+                    developer.
                   </div>
                   <br />
                   <div className="about-me">
                     Currently, I work as a Community Operations Analyst at
-                    Covalen, <br />a tech company. However, my ultimate goal is
-                    to transition into a <br />
-                    full-time role in the tech industry, where I can combine my
-                    legal background and coding skills to create innovative
-                    solutions.
+                    Covalen, a tech company. However, my ultimate goal is to
+                    transition into a full-time role in the tech industry, where
+                    I can combine my legal background and coding skills to
+                    create innovative solutions.
                   </div>
                   <br />
                   <div className="about-me">
@@ -87,9 +86,8 @@ const MainPage = () => {
                   <div className="about-me">
                     I'm driven by a desire to make a positive impact through
                     technology and continuously expand my knowledge in the
-                    field. In my free time, <br />I enjoy exploring new
-                    technologies, attending tech meetups, and engaging in coding
-                    challenges. <br />
+                    field. In my free time, I enjoy exploring new technologies,
+                    attending tech meetups, and engaging in coding challenges.
                     I'm excited about the future and the endless possibilities
                     in the tech industry.{" "}
                   </div>
