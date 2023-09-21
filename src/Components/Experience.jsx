@@ -29,6 +29,13 @@ const starIcon = {
 
 const timeline = [
   {
+    icon: workIcon,
+    date: "Sept 2023 - Present",
+    title: "Volunteer Career Programme Project Manager",
+    place: "Cantonese in Ireland",
+    desc: "Main role is managing the development and implementation of a website, information sessions, and a hotline that will help migrants to start their lives in Ireland. Project is funded by the North East Inner City (NEIC) Programme Office.",
+  },
+  {
     icon: schoolIcon,
     date: "Nov 2022 - May 2023",
     title: "FullStack Developer BootCamp",
@@ -77,7 +84,11 @@ const Experience = () => {
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
-              <p>FullStack Developer, Community Operations Analyst</p>
+              <p>
+                FullStack Developer, Community Operations Analyst,
+                <br />
+                Career Programme Project Manager
+              </p>
             </div>
 
             <div className="">

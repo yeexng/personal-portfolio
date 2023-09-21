@@ -18,7 +18,7 @@ const ProjectArray = [
       "Vercel",
       "Railway",
     ],
-    link: "https://travelone.vercel.app/",
+    link: "https://github.com/yeexng/Travelone_FE",
     about:
       "A website designed mainly targeting single traveler who are seeking companionship and the opportunity to share memories with like-minded individuals. The app aims to connect solo travelers with compatible partners based on their interests, preferences, and travel plans. ",
   },
@@ -87,7 +87,11 @@ const Projects = () => {
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
-              <p>FullStack Developer, Community Operations Analyst</p>
+              <p>
+                FullStack Developer, Community Operations Analyst,
+                <br />
+                Career Programme Project Manager
+              </p>
             </div>
 
             <div className="">

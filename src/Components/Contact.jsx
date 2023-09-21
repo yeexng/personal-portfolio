@@ -20,7 +20,11 @@ const Contact = () => {
               <Link to={"/"} className="no-deco">
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
-              <p>FullStack Developer, Community Operations Analyst</p>
+              <p>
+                FullStack Developer, Community Operations Analyst,
+                <br />
+                Career Programme Project Manager
+              </p>
             </div>
 
             <div className="">

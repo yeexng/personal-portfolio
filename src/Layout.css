@@ -81,10 +81,11 @@ margin-bottom: 3rem;
 
 .my-intro{
   /* height: 70vh; */
-  width: 28vw;
+  width: 32vw;
   position: absolute;
   bottom: 3vh;
   right: 2vw;
+  text-align: justify;
 }
 
 .timeline-div{
