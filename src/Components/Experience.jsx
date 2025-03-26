@@ -30,7 +30,28 @@ const starIcon = {
 const timeline = [
   {
     icon: workIcon,
-    date: "Sept 2023 - Present",
+    date: "Nov 2019 - Present",
+    title: "Community Operations Analyst",
+    place: "Covalen Solutions, Dublin (FB-onsite)",
+    desc: "Chinese Market Specialist and SPAM project",
+  },
+  {
+    icon: schoolIcon,
+    date: "Jan 2025 - March 2025",
+    title: "Google Project Management : Professional Certificate",
+    place: "Coursera - Google",
+    desc: "The Google Project Management: Professional Certificate (Coursera) is a practical program covering the project lifecycle, Agile/Waterfall, and core project management functions from initiation to closure.",
+  },
+  {
+    icon: schoolIcon,
+    date: "Feb 2024 - July 2024",
+    title: "Google Data Analytics Professional Certificate",
+    place: "Coursera - Google",
+    desc: "Through the Google Data Analytics Professional Certificate, I gained skills across the data lifecycle, including data collection, cleaning, analysis, and visualization, using tools like SQL, spreadsheets and R programming.",
+  },
+  {
+    icon: workIcon,
+    date: "June 2023 - May 2024",
     title: "Volunteer Career Programme Project Manager",
     place: "Cantonese in Ireland",
     desc: "Main role is managing the development and implementation of a website, information sessions, and a hotline that will help migrants to start their lives in Ireland. Project is funded by the North East Inner City (NEIC) Programme Office.",
@@ -42,13 +63,7 @@ const timeline = [
     place: "EPICODE",
     desc: "Frontend Development using react, redux, bootstrap, HTML, CSS, and Backend Development using node.js, mongo, express.js",
   },
-  {
-    icon: workIcon,
-    date: "Nov 2019 - Present",
-    title: "Community Operations Analyst",
-    place: "Covalen Solutions, Dublin (FB-onsite)",
-    desc: "Chinese Market Specialist and SPAM project",
-  },
+
   {
     icon: schoolIcon,
     date: "Sep 2016 - May 2019",

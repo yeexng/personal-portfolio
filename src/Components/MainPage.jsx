@@ -55,41 +55,41 @@ const MainPage = () => {
               <div className="my-intro">
                 <div className="my-intro-scroll">
                   <div className="about-me">
-                    I'm Sam YeeXuan Ng, <br />a Malaysian who pursued my
-                    education in Ireland, graduating with an LLB degree.
-                  </div>
-                  <br />
-                  <div className="about-me">
-                    While studying law, I discovered my passion for coding and
-                    decided to dive into the tech industry. I completed a
-                    rigorous coding bootcamp and emerged as a full-stack
-                    developer.
-                  </div>
-                  <br />
-                  <div className="about-me">
-                    Currently, I work as a Community Operations Analyst at
-                    Covalen, a tech company. However, my ultimate goal is to
-                    transition into a full-time role in the tech industry, where
-                    I can combine my legal background and coding skills to
-                    create innovative solutions.
-                  </div>
-                  <br />
-                  <div className="about-me">
-                    In addition to my work at Covalen, I'm also currently
-                    serving as a part-time Volunteer Career Program Manager. In
-                    this role, I'm responsible for managing the development and
-                    implementation of a website, information sessions, and a
-                    hotline that will assist migrants in starting their lives in
+                    I'm Sam YeeXuan Ng, <br />a Malaysian professional with a
+                    strong foundation in both law and technology, gained in
                     Ireland.
                   </div>
                   <br />
                   <div className="about-me">
-                    I'm driven by a desire to make a positive impact through
-                    technology and continuously expand my knowledge in the
-                    field. In my free time, I enjoy exploring new technologies,
-                    attending tech meetups, and engaging in coding challenges.
-                    I'm excited about the future and the endless possibilities
-                    in the tech industry.{" "}
+                    Holding an LLB degree and certification as a Full Stack
+                    Developer, I possess a unique blend of analytical,
+                    problem-solving, and technical skills. My career goal is to
+                    transition into Project Management, leveraging my diverse
+                    background to drive successful project outcomes.
+                  </div>
+                  <br />
+                  <div className="about-me">
+                    Currently serving as a Community Operations Analyst at
+                    Covalen, I have also gained valuable experience as a
+                    Volunteer Career Program Manager.
+                  </div>
+                  <br />
+                  <div className="about-me">
+                    In this role, I demonstrated key project management
+                    competencies, including planning, stakeholder communication,
+                    team leadership, and task delegation. These experiences,
+                    combined with my technical understanding, make me
+                    well-suited for a Project Management role within a
+                    tech-driven environment.
+                  </div>
+                  <br />
+                  <div className="about-me">
+                    Driven by a passion for impactful results, I am committed to
+                    continuous learning and seeking opportunities to apply my
+                    skills in Project Management. I am eager to contribute to
+                    dynamic projects, utilizing my unique skillset to achieve
+                    organizational goals and further develop my expertise in
+                    this field.{" "}
                   </div>
                   <br />
                   <div className="about-me">
