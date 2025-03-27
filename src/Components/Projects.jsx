@@ -7,6 +7,40 @@ import { useState, useEffect } from "react";
 
 const ProjectArray = [
   {
+    image: "/assets/Irelandinfo.png",
+    title: "Ireland Immigrant Information Hub",
+    link: "https://irelandinfo.ie/",
+    tags: [
+      "Ireland Info",
+      "Newcomers Ireland",
+      "Immigrant Service Ireland",
+      "Project Management",
+      "NEIC",
+      "Volunteer Project",
+      "Immigrants",
+      "Cantonese in Ireland",
+    ],
+    about:
+      "This project focused on creating resources to support migrants in Ireland. My role included managing the development and implementation of irelandinfo.ie, a website providing key information, as well as coordinating information sessions and a support hotline.",
+  },
+
+  {
+    image: "/assets/SpotifyClone.png",
+    title: "Spotify Clone",
+    tags: ["CSS", "React", "Redux", "API"],
+    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
+    about:
+      "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
+  },
+  {
+    image: "/assets/MediumClone.png",
+    title: "Medium Clone",
+    tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
+    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
+    about:
+      "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
+  },
+  {
     image: "/assets/Travelone.png",
     title: "Travelone?",
     tags: [
@@ -28,22 +62,6 @@ const ProjectArray = [
     link: "https://github.com/yeexng/U1-BW-Benchmark",
     tags: ["JavaScript", "CSS", "HTML"],
     about: "Project cloning the Epicode benchmark system with result function.",
-  },
-  {
-    image: "/assets/SpotifyClone.png",
-    title: "Spotify Clone",
-    tags: ["CSS", "React", "Redux", "API"],
-    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
-    about:
-      "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
-  },
-  {
-    image: "/assets/MediumClone.png",
-    title: "Medium Clone",
-    tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
-    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
-    about:
-      "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
   },
   {
     image: "/assets/NetflixClone.png",
