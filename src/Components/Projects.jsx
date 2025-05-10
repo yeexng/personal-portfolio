@@ -10,6 +10,8 @@ const ProjectArray = [
     image: "/assets/Irelandinfo.png",
     title: "Ireland Immigrant Information Hub",
     link: "https://irelandinfo.ie/",
+    documentation:
+      "https://drive.google.com/drive/folders/1mkr5Zl8vLu_MiLb1s211qX5U3bsP2QqR?usp=sharing",
     tags: [
       "Ireland Info",
       "Newcomers Ireland",
@@ -23,22 +25,22 @@ const ProjectArray = [
     about:
       "This project focused on creating resources to support migrants in Ireland. My role included managing the development and implementation of irelandinfo.ie, a website providing key information, as well as coordinating information sessions and a support hotline.",
   },
-
   {
-    image: "/assets/SpotifyClone.png",
-    title: "Spotify Clone",
-    tags: ["CSS", "React", "Redux", "API"],
-    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
+    image: "/assets/Sauce&Spoon.png",
+    title: "Project Management Capstone Project : Sauce & Spoon",
+    tags: [
+      "Coursera",
+      "Project Management",
+      "Capstone Project",
+      "Agile",
+      "Stakeholder Management",
+      "Timeline Planning",
+      "Restaurant Tech",
+      "Digital Transformation",
+    ],
+    link: "https://drive.google.com/drive/folders/1NZ6MSn8TXJgLxWNqr6FFItsA-dthPJTX?usp=sharing",
     about:
-      "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
-  },
-  {
-    image: "/assets/MediumClone.png",
-    title: "Medium Clone",
-    tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
-    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
-    about:
-      "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
+      "As part of the Google Project Management course capstone, I led a simulated project for Sauce & Spoon, a restaurant introducing a tabletop tablet ordering system. The project involved developing a project charter, stakeholder analysis, timeline, and implementation plan. I applied Agile methodology to ensure flexibility and stakeholder collaboration throughout the process.",
   },
   {
     image: "/assets/Travelone.png",
@@ -56,6 +58,23 @@ const ProjectArray = [
     about:
       "A website designed mainly targeting single traveler who are seeking companionship and the opportunity to share memories with like-minded individuals. The app aims to connect solo travelers with compatible partners based on their interests, preferences, and travel plans. ",
   },
+  {
+    image: "/assets/SpotifyClone.png",
+    title: "Spotify Clone",
+    tags: ["CSS", "React", "Redux", "API"],
+    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
+    about:
+      "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
+  },
+  {
+    image: "/assets/MediumClone.png",
+    title: "Medium Clone",
+    tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
+    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
+    about:
+      "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
+  },
+
   {
     image: "/assets/Benchmark.png",
     title: "Epicode Benchmark",
@@ -155,6 +174,33 @@ const Projects = () => {
                               {posts.title}
                             </Card.Title>
                             <Card.Text>{posts.about}</Card.Text>
+
+                            {/* Links Section */}
+                            <div className="mb-2">
+                              {posts.link && (
+                                <a
+                                  href={posts.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="btn btn-sm btn-outline-primary mr-2"
+                                  onClick={(e) => e.stopPropagation()} // prevent parent card click
+                                >
+                                  Visit Site
+                                </a>
+                              )}
+                              {posts.documentation && (
+                                <a
+                                  href={posts.documentation}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="btn btn-sm btn-outline-secondary"
+                                  onClick={(e) => e.stopPropagation()} // prevent parent card click
+                                >
+                                  View Docs
+                                </a>
+                              )}
+                            </div>
+
                             <div className="badge-container">
                               {posts.tags.map((tag, index) => (
                                 <Badge
