@@ -7,6 +7,20 @@ import { useState, useEffect } from "react";
 
 const ProjectArray = [
   {
+    image: "/assets/E2E.png",
+    title: "Portfolio E2E Automation Suite",
+    link: "https://github.com/yeexng/personal-portfolio/actions",
+    tags: [
+      "Playwright",
+      "TypeScript",
+      "GitHub Actions (CI/CD)",
+      "E2E Testing",
+      "Test Automation",
+    ],
+    about:
+      "Designed and implemented a comprehensive E2E test automation suite for this React portfolio using Playwright and TypeScript. The suite is integrated into a GitHub Actions CI/CD pipeline to validate critical user journeys and ensure zero UI regressions on every deployment.",
+  },
+  {
     image: "/assets/Irelandinfo.png",
     title: "Ireland Immigrant Information Hub",
     link: "https://irelandinfo.ie/",
@@ -38,7 +52,8 @@ const ProjectArray = [
       "Restaurant Tech",
       "Digital Transformation",
     ],
-    link: "https://drive.google.com/drive/folders/1NZ6MSn8TXJgLxWNqr6FFItsA-dthPJTX?usp=sharing",
+    documentation:
+      "https://drive.google.com/drive/folders/1NZ6MSn8TXJgLxWNqr6FFItsA-dthPJTX?usp=sharing",
     about:
       "As part of the Google Project Management course capstone, I led a simulated project for Sauce & Spoon, a restaurant introducing a tabletop tablet ordering system. The project involved developing a project charter, stakeholder analysis, timeline, and implementation plan. I applied Agile methodology to ensure flexibility and stakeholder collaboration throughout the process.",
   },
@@ -54,7 +69,7 @@ const ProjectArray = [
       "Vercel",
       "Railway",
     ],
-    link: "https://github.com/yeexng/Travelone_FE",
+    documentation: "https://github.com/yeexng/Travelone_FE",
     about:
       "A website designed mainly targeting single traveler who are seeking companionship and the opportunity to share memories with like-minded individuals. The app aims to connect solo travelers with compatible partners based on their interests, preferences, and travel plans. ",
   },
@@ -62,7 +77,7 @@ const ProjectArray = [
     image: "/assets/SpotifyClone.png",
     title: "Spotify Clone",
     tags: ["CSS", "React", "Redux", "API"],
-    link: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
+    documentation: "https://github.com/yeexng/U3_D15_soloProject_Spotify_2",
     about:
       "Project cloning the famous music app, which involves fetching music data from an API, implementing a search function and music player. ",
   },
@@ -70,7 +85,7 @@ const ProjectArray = [
     image: "/assets/MediumClone.png",
     title: "Medium Clone",
     tags: ["JavaScript", "CSS", "HTML", "Bootstrap"],
-    link: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
+    documentation: "https://github.com/yeexng/U2_D5_SoloProject_Medium_Clone",
     about:
       "In this project, I had clone the Medium.com website. Mainly focusing on Bootstrap practice.",
   },
@@ -78,7 +93,7 @@ const ProjectArray = [
   {
     image: "/assets/Benchmark.png",
     title: "Epicode Benchmark",
-    link: "https://github.com/yeexng/U1-BW-Benchmark",
+    documentation: "https://github.com/yeexng/U1-BW-Benchmark",
     tags: ["JavaScript", "CSS", "HTML"],
     about: "Project cloning the Epicode benchmark system with result function.",
   },
@@ -86,7 +101,7 @@ const ProjectArray = [
     image: "/assets/NetflixClone.png",
     title: "NetFlix Clone",
     tags: ["node.js", "API", "CRUD", "JavaScript", "Bootstrap"],
-    link: "https://github.com/yeexng/U3_D5_Solo_Project_React_NetFlix",
+    documentation: "https://github.com/yeexng/U3_D5_Solo_Project_React_NetFlix",
     about: "Clone of the famous streaming platform",
   },
 ];
@@ -125,9 +140,8 @@ const Projects = () => {
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
               <p>
-                FullStack Developer, Community Operations Analyst,
-                <br />
-                Career Programme Project Manager
+                Quality Analyst | Aspiring Automation Engineer | Full Stack
+                Developer
               </p>
             </div>
 

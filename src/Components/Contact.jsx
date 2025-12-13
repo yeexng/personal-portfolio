@@ -21,9 +21,8 @@ const Contact = () => {
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
               <p>
-                FullStack Developer, Community Operations Analyst,
-                <br />
-                Career Programme Project Manager
+                Quality Analyst | Aspiring Automation Engineer | Full Stack
+                Developer
               </p>
             </div>
 

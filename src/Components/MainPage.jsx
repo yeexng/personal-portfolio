@@ -19,8 +19,8 @@ const MainPage = () => {
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
               <p>
-                FullStack Developer, Community Operations Analyst, <br />
-                Career Programme Project Manager
+                Quality Analyst | Aspiring Automation Engineer | Full Stack
+                Developer
               </p>
             </div>
             <TransitionGroup component={null}>
@@ -55,46 +55,37 @@ const MainPage = () => {
               <div className="my-intro">
                 <div className="my-intro-scroll">
                   <div className="about-me">
-                    I'm Sam YeeXuan Ng, <br />a Malaysian professional with a
-                    strong foundation in both law and technology, gained in
-                    Ireland.
+                    I am a Quality Analyst with a rare dual perspective: <br />
+                    the analytical discipline of a Lawyer and the execution
+                    mindset of a Full-Stack Developer.
                   </div>
                   <br />
                   <div className="about-me">
-                    Holding an LLB degree and certification as a Full Stack
-                    Developer, I possess a unique blend of analytical,
-                    problem-solving, and technical skills. My career goal is to
-                    transition into Project Management, leveraging my diverse
-                    background to drive successful project outcomes.
+                    With an LLB background, I am trained to detect
+                    inconsistencies, assess risk, and reason through complex
+                    logical systems. I bring this rigor into software quality by
+                    pairing it with hands-on technical expertise in React,
+                    TypeScript, and Playwright, building scalable and reliable
+                    automation frameworks from the ground up.
                   </div>
                   <br />
                   <div className="about-me">
-                    Currently serving as a Community Operations Analyst at
-                    Covalen, I have also gained valuable experience as a
-                    Volunteer Career Program Manager.
+                    I don’t approach quality as surface-level testing. I read
+                    the code, understand the architecture, and trace failures to
+                    their root causes. This allows me to design tests that are
+                    not only robust, but also meaningful to long-term system
+                    stability.
                   </div>
                   <br />
                   <div className="about-me">
-                    In this role, I demonstrated key project management
-                    competencies, including planning, stakeholder communication,
-                    team leadership, and task delegation. These experiences,
-                    combined with my technical understanding, make me
-                    well-suited for a Project Management role within a
-                    tech-driven environment.
+                    My focus is on preventing defects, not just detecting
+                    them—leveraging automation, CI/CD pipelines, and thoughtful
+                    test design to help teams ship software with confidence.
                   </div>
                   <br />
                   <div className="about-me">
-                    Driven by a passion for impactful results, I am committed to
-                    continuous learning and seeking opportunities to apply my
-                    skills in Project Management. I am eager to contribute to
-                    dynamic projects, utilizing my unique skillset to achieve
-                    organizational goals and further develop my expertise in
-                    this field.{" "}
-                  </div>
-                  <br />
-                  <div className="about-me">
-                    Let's connect and explore the exciting world of technology
-                    together!
+                    I am currently based in Ireland and open to opportunities in
+                    Test Automation and Quality Engineering.
                   </div>
                 </div>
               </div>

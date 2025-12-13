@@ -30,7 +30,14 @@ const starIcon = {
 const timeline = [
   {
     icon: workIcon,
-    date: "Nov 2019 - Present",
+    date: "Nov 2025 - Present",
+    title: "Quality Analyst",
+    place: "Covalen Solutions, Dublin (FB-onsite)",
+    desc: "Specializing in quality audits, content moderation, and escalation management for the EU region. Analyzing complex abuse trends across all policy verticals to improve detection accuracy and ensure strict SLA compliance.",
+  },
+  {
+    icon: workIcon,
+    date: "Nov 2019 - Nov 2025",
     title: "Community Operations Analyst",
     place: "Covalen Solutions, Dublin (FB-onsite)",
     desc: "Chinese Market Specialist and SPAM project",
@@ -100,9 +107,8 @@ const Experience = () => {
                 <h1 className="name mb-0">Sam YX Ng</h1>
               </Link>
               <p>
-                FullStack Developer, Community Operations Analyst,
-                <br />
-                Career Programme Project Manager
+                Quality Analyst | Aspiring Automation Engineer | Full Stack
+                Developer
               </p>
             </div>
 
