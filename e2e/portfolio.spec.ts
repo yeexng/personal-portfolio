@@ -46,3 +46,22 @@ test.describe("Portfolio E2E Tests", () => {
     await page.screenshot({ path: "portfolio-content-check.png" });
   });
 });
+
+// 测试用例 3: 移动端适配测试
+test("Mobile Viewport Check", async ({ page }) => {
+  // 1. 把浏览器窗口变成 iPhone 12/13 的大小
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  await page.goto("https://samyxng.vercel.app/");
+
+  // 2. 验证：在手机上，你的名字还看得见吗？
+  await expect(page.getByText("Sam YX Ng")).toBeVisible();
+
+  // 点击 Projects
+  await page.getByRole("link", { name: "Projects" }).click();
+  await expect(page).toHaveURL(/projects/);
+  await expect(page.getByText("Playwright", { exact: true })).toBeVisible();
+
+  // 3. 截图留念 (这就叫 Visual Testing 的雏形)
+  await page.screenshot({ path: "mobile-view-check.png" });
+});
