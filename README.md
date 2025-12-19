@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Personal Portfolio - Sam Yee Xuan Ng
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal portfolio website, built with **React** and **TypeScript**, showcasing my professional background as a Quality Analyst and aspiring Automation Engineer.
 
-## Available Scripts
+🚀 **Live Demo:** [https://samyxng.vercel.app/](https://samyxng.vercel.app/)
 
-In the project directory, you can run:
+![Playwright Tests](https://github.com/yeexng/personal-portfolio/actions/workflows/playwright.yml/badge.svg)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Frontend:** React, TypeScript, CSS Modules
+* **Animation:** tsparticles (Interactive background)
+* **Deployment:** Vercel
+* **Test Automation:** Playwright
+* **CI/CD:** GitHub Actions
+* **Environment:** Docker
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 Testing Strategy
 
-### `npm run build`
+This project implements a robust **E2E automation suite** using Playwright. The goal is to serve as a **deployment confidence gate**, focusing on critical user flows and visual stability rather than 100% regression coverage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ✅ Scope
+* **Navigation Sanity:** Ensuring all links and routing work as expected.
+* **Critical Content Presence:** Verifying name, role, and key portfolio sections load correctly.
+* **Visual Stability:** Detecting layout regressions on static elements using Visual Regression Testing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🚫 Out of Scope (Intentionally Not Tested)
+* **Internal Component Logic:** Covered by Unit Tests (if applicable).
+* **Animations & Particle Effects:** Excluded to prevent flaky tests.
+* **Dynamic Background Pixels:** Masked out during visual regression checks to ensure stability.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🛡️ Flakiness Mitigation
+* **Disable Animations:** CSS/JS animations are disabled during test execution (`animations: 'disabled'`).
+* **Dynamic Masking:** The particle background (`#tsparticles`) is masked with a solid color to ensure consistent visual diffs across environments.
+* **Dockerized Execution:** Tests run inside a Docker container to eliminate OS-specific rendering inconsistencies.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+* Node.js (v18+)
+* npm
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/yeexng/personal-portfolio.git
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+    
+### Running the App
 
-## Learn More
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
+### Run tests (Headless mode)
+``` bash
+npx playwright test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Run tests with UI mode (Interactive)
+``` bash
+npx playwright test --ui
+```
 
-### Code Splitting
+### Update Visual Snapshots: If you made intentional design changes, update the baseline screenshots
+``` bash
+npx playwright test --update-snapshots
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚙️ CI/CD Pipeline
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This repository uses **GitHub Actions** to automatically run the test suite on every Pull Request.
+* **Workflow file:** `.github/workflows/playwright.yml`
+* **Artifacts:** Playwright HTML reports are generated and uploaded as artifacts for failed runs.
+  
+---
+[LinkedIn](https://www.linkedin.com/in/samyxng) | [Portfolio](https://samyxng.vercel.app/)
