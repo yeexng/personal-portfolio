@@ -65,3 +65,39 @@ test("Mobile Viewport Check", async ({ page }) => {
   // 3. 截图留念 (这就叫 Visual Testing 的雏形)
   await page.screenshot({ path: "mobile-view-check.png" });
 });
+
+test("Visual Regression Check - Home Page (Stable)", async ({ page }) => {
+  // 1. 访问首页
+  await page.goto("https://samyxng.vercel.app/");
+
+  // 2. 等待加载
+  await page.waitForLoadState("networkidle");
+  await page.waitForTimeout(2000);
+
+  // 🔥【关键修改】直接注入 CSS，强制隐藏粒子背景和打字机光标
+  // 这样比 mask 更彻底，直接让动的东西消失。
+  await page.addStyleTag({
+    content: `
+      /* 隐藏星星背景 */
+      #tsparticles { 
+        display: none !important; 
+        visibility: hidden !important;
+      }
+      
+      /* (可选) 如果你有打字机效果的光标在闪，把下面这行也加上 */
+      .Typewriter__cursor {
+        visibility: hidden !important;
+      }
+    `,
+  });
+
+  // 给一点点时间让 CSS 生效
+  await page.waitForTimeout(500);
+
+  // 3. 视觉断言
+  await expect(page).toHaveScreenshot("home-page-stable.png", {
+    maxDiffPixels: 200,
+    // 既然背景已经 display: none 了，就不需要 mask 了，也不需要 huge timeout 了
+    animations: "disabled",
+  });
+});

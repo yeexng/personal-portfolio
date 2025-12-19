@@ -69,19 +69,21 @@ const Contact = () => {
               </a>
             </p>
             <p className="about-me no-deco">
+              <a
+                href={Resume}
+                download="SamNgCV"
+                target="_blank"
+                rel="noreferrer"
+                className="resume no-deco"
+              >
+                My Resume{" "}
+              </a>
+            </p>
+            <p className="about-me no-deco">
               <a href="mailto:xuanng96@hotmail.com" className="no-deco">
                 xuanng96@hotmail.com
               </a>{" "}
             </p>
-            <a
-              href={Resume}
-              download="SamNgCV"
-              target="_blank"
-              rel="noreferrer"
-              className="resume no-deco"
-            >
-              Resume{" "}
-            </a>
           </div>
         </div>
       </div>
