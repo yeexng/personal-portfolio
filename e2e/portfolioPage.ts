@@ -6,11 +6,11 @@ export class PortfolioPage {
   readonly nameHeader: Locator;
   readonly roleText: Locator;
 
-  // 新增：導航欄連結
+  // Navigation Links
   readonly projectsLink: Locator;
   readonly contactLink: Locator;
 
-  // 新增：驗證用的元素
+  // Verification Elements
   readonly netflixProject: Locator;
   readonly emailText: Locator;
 
@@ -19,12 +19,11 @@ export class PortfolioPage {
     this.nameHeader = page.getByRole("heading", { name: /Sam YX Ng/i });
     this.roleText = page.getByText(/Quality Analyst \| Aspiring/i);
 
-    // 1. 定義導航連結
+    // 1. Define Navigation Links
     this.projectsLink = page.getByRole("link", { name: "Projects" });
     this.contactLink = page.getByRole("link", { name: "Contact" });
 
-    // 2. 定義驗證元素
-    // 注意：這裡直接複製你原本 spec 裡成功的 locator
+    // 2. Define Verification Elements
     this.netflixProject = page.getByText("Netflix Clone");
     this.emailText = page.getByText("xuanng96@hotmail.com");
   }
@@ -39,7 +38,7 @@ export class PortfolioPage {
     await expect(this.roleText).toBeVisible();
   }
 
-  // --- 新增的 Actions (動作) ---
+  // --- Actions ---
 
   async navigateToProjects() {
     await this.projectsLink.click();
@@ -49,7 +48,7 @@ export class PortfolioPage {
     await this.contactLink.click();
   }
 
-  // --- 新增的 Assertions (驗證) ---
+  // --- Assertions ---
 
   async verifyProjectVisible() {
     await expect(this.netflixProject).toBeVisible();
