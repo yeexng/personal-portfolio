@@ -1,56 +1,60 @@
 import { test, expect } from "@playwright/test";
 
-// 这是一个 "Describe" 块，用来把相关测试分组（就像文件夹一样），让报告更好看
 test.describe("Portfolio E2E Tests", () => {
-  // 测试用例 1: 检查你的个人品牌文案 (Profile Check)
+  // Test Case 1: Verify Profile Content
   test("Portfolio Profile Content Check (Keywords)", async ({ page }) => {
+    // Note: If baseURL is set in playwright.config.ts, you can just use page.goto("/")
     await page.goto("https://samyxng.vercel.app/");
 
-    // 1. 验证你的新身份标签
-    // 确保 "Lawyer" 和 "Full-Stack Developer" 关键词出现
+    // 1. Verify Identity Keywords
+    // Ensuring the "Quality Analyst" persona is visible
     await expect(page.getByText("discipline of a Lawyer")).toBeVisible();
     await expect(page.getByText("Full-Stack Developer")).toBeVisible();
 
-    // 2. 验证核心技能关键词 (Playwright)
+    // 2. Verify Core Skills (Playwright)
     await expect(page.getByText("Playwright")).toBeVisible();
 
-    // 3. (反向验证) 确保旧的 "Project Manager" 彻底消失了
+   // 3. Negative Assertion: Ensure old roles (e.g., Project Manager) are not visible
     await expect(page.getByText("Project Manager")).not.toBeVisible();
 
-    // 再次截图，确认文案正确
+    // Capture evidence
     await page.screenshot({ path: "portfolio-content-check.png" });
   });
 });
 
-// 测试用例 2: 移动端适配测试
+// Test Case 2: Mobile Responsiveness Check
 test("Mobile Viewport Check", async ({ page }) => {
-  // 1. 把浏览器窗口变成 iPhone 12/13 的大小
+ // 1. Set viewport to iPhone 12/13 dimensions
   await page.setViewportSize({ width: 390, height: 844 });
 
   await page.goto("https://samyxng.vercel.app/");
 
-  // 2. 验证：在手机上，你的名字还看得见吗？
+  // 2. Verify name visibility on mobile layout
   await expect(page.getByText("Sam YX Ng")).toBeVisible();
 
-  // 点击 Projects
+  // Test Navigation to Projects section
   await page.getByRole("link", { name: "Projects" }).click();
   await expect(page).toHaveURL(/projects/);
+
+  // Verify content in mobile view
+  // Note: Removed { exact: true } to be more robust
   await expect(page.getByText("Playwright", { exact: true })).toBeVisible();
 
-  // 3. 截图留念 (这就叫 Visual Testing 的雏形)
+  // 3. Capture mobile view screenshot
   await page.screenshot({ path: "mobile-view-check.png" });
 });
 
+// Test Case 3: Visual Regression Test
 test("Visual Regression Check - Home Page (Stable)", async ({ page }) => {
-  // 1. 访问首页
+  // 1. Visit Home Page
   await page.goto("https://samyxng.vercel.app/");
 
-  // 2. 等待加载
+  // 2. Wait for network idle to ensure assets are loaded
   await page.waitForLoadState("networkidle");
   await page.waitForTimeout(2000);
 
-  // 🔥【关键修改】直接注入 CSS，强制隐藏粒子背景和打字机光标
-  // 这样比 mask 更彻底，直接让动的东西消失。
+  // Inject CSS to mask dynamic elements (particles, cursor) for stable snapshots
+  // This prevents flaky visual tests caused by animations
   await page.addStyleTag({
     content: `
       /* 隐藏星星背景 */
@@ -66,13 +70,12 @@ test("Visual Regression Check - Home Page (Stable)", async ({ page }) => {
     `,
   });
 
-  // 给一点点时间让 CSS 生效
+  // Allow time for CSS to apply
   await page.waitForTimeout(500);
 
-  // 3. 视觉断言
+  // 3. Visual Assertion
   await expect(page).toHaveScreenshot("home-page-stable.png", {
     maxDiffPixels: 200,
-    // 既然背景已经 display: none 了，就不需要 mask 了，也不需要 huge timeout 了
     animations: "disabled",
   });
 });

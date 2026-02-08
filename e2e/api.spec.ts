@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("API Testing with Playwright", () => {
   const baseURL = "https://jsonplaceholder.typicode.com";
 
-  // 1. GET: 讀取資料
+  // 1. GET: Retrieve Data
   test("GET - Retrieve Posts", async ({ request }) => {
     const response = await request.get(`${baseURL}/posts/1`);
     expect(response.status()).toBe(200);
@@ -13,7 +13,7 @@ test.describe("API Testing with Playwright", () => {
     console.log("GET Response:", responseBody);
   });
 
-  // 2. POST: 創建資料
+  // 2. POST: Create Data
   test("POST - Create New Post", async ({ request }) => {
     const newPost = {
       title: "You can't see me",
@@ -29,45 +29,43 @@ test.describe("API Testing with Playwright", () => {
     console.log("POST Response:", responseBody);
   });
 
-  // 👇 這是你要的新部分 👇
-
-  // 3. PUT: 更新資料 (Update)
+  // 3. PUT: Update Data
   test("PUT - Update Existing Post", async ({ request }) => {
-    // 準備要更新的資料
+    // Prepare update payload
     const updatedPost = {
-      id: 1, // 指定要更新 ID 為 1 的文章
+      id: 1, // Target ID 1
       title: "You still can't see me",
       body: "But I'm still here",
       userId: 1,
     };
 
-    // 發送 PUT 請求到 /posts/1
+    // Send PUT request to /posts/1
     const response = await request.put(`${baseURL}/posts/1`, {
       data: updatedPost,
     });
 
-    // 驗證狀態碼 (更新成功通常是 200)
+    // Verify status code (200 OK)
     expect(response.status()).toBe(200);
 
-    // 驗證回傳的內容是否真的變了
+    // Verify the response body reflects changes
     const responseBody = await response.json();
     expect(responseBody.title).toBe("You still can't see me");
-    console.log("PUT Response:", responseBody); // 印出來看看
+    console.log("PUT Response:", responseBody);
   });
 
-  // 4. DELETE: 刪除資料 (Delete)
+ // 4. DELETE: Remove Data
   test("DELETE - Remove Post", async ({ request }) => {
-    // 發送 DELETE 請求到 /posts/1
+    // Send DELETE request to /posts/1
     const response = await request.delete(`${baseURL}/posts/1`);
 
-    // 驗證狀態碼 (刪除成功通常是 200 或 204)
+    // Verify status code (typically 200 or 204)
     expect(response.status()).toBe(200);
 
-    // 驗證回傳內容 (JSONPlaceholder 刪除後會回傳空物件 {})
+    // Verify response body (JSONPlaceholder returns empty object {} on delete)
     const responseBody = await response.json();
     console.log("DELETE Response: Successful", responseBody);
 
-    // 檢查回傳是不是空的
+    // Ensure response is empty
     expect(responseBody).toEqual({});
   });
 });
